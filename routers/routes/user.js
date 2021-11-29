@@ -1,9 +1,14 @@
+// عمل ريكواير للاكسبريس
 const express = require("express");
+// تسميه يوزر روتر لتعريفة واستخدامه في الاندكس
 const userRoute = express.Router();
 
-const{resgister,login,}= require("./../controllers/user");
+// امتداد الكنترول يوزر
+const { resgister, login } = require("./../controllers/user");
 
-userRoute.post("/resgister",resgister);
-userRoute.post("/login",login);
-
-module.exports = userRoute
+// باث التسجيل
+userRoute.post("/resgister", resgister);
+// باث الدخول
+userRoute.post("/login", login);
+// عمل اكسبورت لليوزر روتر
+module.exports = userRoute;

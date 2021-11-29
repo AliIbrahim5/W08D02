@@ -1,32 +1,32 @@
-
 //خطوات بناء السيرفر
 //1-عمل ريكواير للاكسبريس ودونت انف
 const express = require("express");
-
+// عمل ريكواير لدونت انف
 const dotenv = require("dotenv");
-
+// ريكواير للكورس
 const cors = require("cors");
 
-
 // تعريف appللاكسبرس
-const app = express()
+const app = express();
 // تعريف donenv في الاندكس
-dotenv.config()
+dotenv.config();
 // ريكواير من الدي بي الى الاندكس
 const db = require("./db/index");
 app.use(express.json());
-// استدعاء من مجلد الروترز ومن ثم مجلد الروتز
-const roleRouter =require("./routers/routes/role");
+//   استدعاء من مجلد الروترز ومن ثم مجلد الرول
+const roleRouter = require("./routers/routes/role");
+// استدعاء من مجلد الروترز ومن ثم مجلد اليورز
 const userRoute = require("./routers/routes/user");
 
 // لتشغيله في مجلد الاندكس
 app.use(roleRouter);
+// لتشغيلة في مجلد الاندكس
 app.use(userRoute);
 // استدعاء البورت من .env عن طيق process.env.PORT
-const PORT = process.env.PORT||5000;
-app.use(cors())
+const PORT = process.env.PORT || 5000;
+app.use(cors());
 
 // app.lidten تتأكد من تشغيل السيرفر في حال اذا كان شغال او لا
 app.listen(PORT, () => {
-    console.log(`server is running on port ${PORT}`);
-  });
+  console.log(`server is running on port ${PORT}`);
+});

@@ -60,6 +60,7 @@ const login = (req, res) => {
         res.send(err);
       });
   };
-  
 
-module.exports ={resgister,login}
+
+
+module.exports ={resgister,login,}

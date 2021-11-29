@@ -1,6 +1,6 @@
 
 // ريكواير لمجلد ارول في الموديولز
-const rolemodel = require("./../../../db/models/role");
+const rolemodel = require("../../db/models/role");
 // عمل نيو موديول لاخذها من البوست مان عن طريق البدي
 const newrolr =(req,res)=>{
     const {role,permossion}=req.body;

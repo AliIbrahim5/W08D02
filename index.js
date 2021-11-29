@@ -9,6 +9,9 @@ const dotenv = require("dotenv");
 const app = express()
 // تعريف donenv في الاندكس
 dotenv.config()
+// ريكواير من الدي بي الى الاندكس
+const db = require("./db/index");
+app.use(express.json());
 // استدعاء البورت من .env عن طيق process.env.PORT
 const PORT = process.env.PORT||5000;
 

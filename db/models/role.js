@@ -9,4 +9,5 @@ const role = new mongoose.Schema({
 
 
   });
+//   اكسبورت للرول
   module.exports = mongoose.model("Role", role);

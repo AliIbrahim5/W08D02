@@ -18,7 +18,7 @@
 
 
 ## ER diagram
-<img src='https://app.diagrams.net/?title=Copy%20of%20Untitled%20Diagram-Page-1.drawio.png&client=1' alt='img'/>
+<img src='https://app.diagrams.net/' alt='ERdiagram'/>
 
 ## models-roleSchema
 

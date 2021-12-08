@@ -16,6 +16,10 @@
 
 1- npm i nodmone (globe)
 
+
+## ER diagram
+<img src='https://ibb.co/fH8X3VV' alt='img'/>
+
 ## models-roleSchema
 
 const mongoose = require("mongoose");

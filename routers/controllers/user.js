@@ -29,6 +29,44 @@ const resgister = async (req, res, next) => {
       res.send(err);
     });
 };
+
+// كنترول الدخول لليوزر
+// const login = (req, res) => {
+//   const { email, password } = req.body;
+//   const savedEmail = email.toLowerCase();
+
+//   usermodel
+//     .findOne({ email: savedEmail })
+//     .then(async (result) => {
+//       if (result) {
+//         if (result.email == email) {
+//           const savedPassword = await bcrypt.compare(
+//             password,
+//             result.password,
+//             options
+//           );
+//           const payload = {
+//             email,
+//           };
+//           if (savedPassword) {
+//             const token = jwt.sign(payload, secret);
+
+//             res.status(200).json({ result, token });
+//           } else {
+//             res.status(400).json("Wrong email or password");
+//           }
+//         } else {
+//           res.status(400).json("Wrong email or password");
+//         }
+//       } else {
+//         res.status(404).json("Email not exist");
+//       }
+//     })
+//     .catch((err) => {
+//       res.send(err);
+//     });
+// };
+
 // كنترول الدخول لليوزر
 const login = (req, res) => {
   const { email, password } = req.body;
@@ -44,8 +82,7 @@ const login = (req, res) => {
             email,
           };
           if (savedPassword) {
-            const token = jwt.sign(payload, secret);
-
+            let token = jwt.sign(payload, secret);
             res.status(200).json({ result, token });
           } else {
             res.status(400).json("Wrong email or password");
@@ -61,6 +98,5 @@ const login = (req, res) => {
       res.send(err);
     });
 };
-
 // اكسبورت لتسجيل والدخول
 module.exports = { resgister, login };

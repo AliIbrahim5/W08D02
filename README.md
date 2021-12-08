@@ -17,8 +17,11 @@
 1- npm i nodmone (globe)
 
 
+## UML diagram
+<img src='https://i.ibb.co/6PCmkYg/Untitled-drawio.png' alt='img'/>
+
 ## ER diagram
-<img src='https://app.diagrams.net/?client=1' alt='ERdiagram'/>
+<img src='https://i.ibb.co/wLV0SXw/soical-media-ERD.jpg' alt='img'/>
 
 ## models-roleSchema
 

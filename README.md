@@ -18,7 +18,7 @@
 
 
 ## ER diagram
-<img src='https://shortest.link/28T9' alt='ERdiagram'/>
+<img src='https://app.diagrams.net/?client=1' alt='ERdiagram'/>
 
 ## models-roleSchema
 
